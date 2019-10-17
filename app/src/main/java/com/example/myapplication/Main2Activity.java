@@ -14,12 +14,17 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.myapplication.ui.main.SectionsPagerAdapter;
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
 
 public class Main2Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AppCenter.start(getApplication(), "0bd5324f-031c-40bd-ae0a-1b91d24ffd25",
+                Analytics.class, Crashes.class);
         setContentView(R.layout.activity_main2);
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
         ViewPager viewPager = findViewById(R.id.view_pager);
