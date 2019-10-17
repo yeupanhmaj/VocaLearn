@@ -43,7 +43,7 @@ public class Main2Activity extends AppCompatActivity {
     }
     private void setUpTab()
     {
-        tabs.getTabAt(0).setIcon(R.drawable.ic_launcher_background);
-        tabs.getTabAt(0).setText("");
+        tabs.getTabAt(0).setIcon(R.drawable.ic_avatar);
+        tabs.getTabAt(1).setIcon(R.drawable.ic_settings);
     }
 }
